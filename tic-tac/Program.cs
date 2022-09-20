@@ -18,7 +18,7 @@ namespace tic_tac
         {7,"7"},
         {8,"8"},
         {9,"9"},
-    };
+        };
         static void Main(string[] args)
         {
             while (hasWinner != true && roundCount < 9)
