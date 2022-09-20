@@ -5,11 +5,9 @@ namespace tic_tac
 {
     class Program
     {
-        // static string[] pieces = {"hs", "el"};
-        // static List<string> boardPieces = new List<string>();
         static int currPlayer = 0;
         static bool hasWinner = false;
-        static bool isTie = false;
+        static int roundCount = 0;
         static Dictionary<int, string> Pieces = new Dictionary<int, string>(){
         {1,"1"},
         {2,"2"},
@@ -23,34 +21,15 @@ namespace tic_tac
     };
         static void Main(string[] args)
         {
-            while (hasWinner != true)
+            while (hasWinner != true && roundCount < 9)
             {
-                while (isTie != true){
-                    PrintBoard();
-                    PlayerTurn();
-                    WinLogic();
-                    TieLogic();
-                }
-                Console.WriteLine($"Game Over! It was a Tie.");
+                PrintBoard();
+                PlayerTurn();
+                WinLogic();
+                roundCount += 1;
             }
-        }
-        // public static void ReturnPieces(){
-        //     boardPieces.AddRange(pieces);
-        //     Console.WriteLine(boardPieces.Count);
-        //     for (int p = 0; p < boardPieces.Count; p++){
-        //         Console.WriteLine(boardPieces[p]);
-        //     };
-        // }
-
-        public static void TieLogic(){
-            int numSpotsOpen = 0;
-            foreach(KeyValuePair<int, string> e in Pieces){
-                if (e.Value != "O" || e.Value != "X") {
-                    numSpotsOpen += 1;
-                }
-                if (numSpotsOpen == 0){
-                    isTie = true;
-                }
+            if (roundCount == 9 && hasWinner != true){
+                Console.WriteLine("Game Over, it was a Tie!");
             }
         }
 
@@ -67,42 +46,42 @@ namespace tic_tac
             if (Pieces[1] == Pieces[2] && Pieces[1] == Pieces[3])
             {
                 hasWinner = true;
-                Console.WriteLine(currPlayer + "won the game!");
+                Console.WriteLine(currPlayer == 1 ? "Player X won the game!": "Player O won the game!");
             }
             else if (Pieces[4] == Pieces[5] && Pieces[4] == Pieces[6])
             {
                 hasWinner = true;
-                Console.WriteLine(currPlayer + "won the game!");
+                Console.WriteLine(currPlayer == 1 ? "Player X won the game!": "Player O won the game!");
             }
             else if (Pieces[7] == Pieces[8] && Pieces[7] == Pieces[9])
             {
                 hasWinner = true;
-                Console.WriteLine(currPlayer + "won the game!");
+                Console.WriteLine(currPlayer == 1 ? "Player X won the game!": "Player O won the game!");
             }
             else if (Pieces[1] == Pieces[4] && Pieces[1] == Pieces[7])
             {
                 hasWinner = true;
-                Console.WriteLine(currPlayer + "won the game!");
+                Console.WriteLine(currPlayer == 1 ? "Player X won the game!": "Player O won the game!");
             }
             else if (Pieces[2] == Pieces[5] && Pieces[2] == Pieces[8])
             {
                 hasWinner = true;
-                Console.WriteLine(currPlayer + "won the game!");
+                Console.WriteLine(currPlayer == 1 ? "Player X won the game!": "Player O won the game!");
             }
             else if (Pieces[3] == Pieces[6] && Pieces[3] == Pieces[9])
             {
                 hasWinner = true;
-                Console.WriteLine(currPlayer + "won the game!");
+                Console.WriteLine(currPlayer == 1 ? "Player X won the game!": "Player O won the game!");
             }
             else if (Pieces[1] == Pieces[5] && Pieces[1] == Pieces[9])
             {
                 hasWinner = true;
-                Console.WriteLine(currPlayer + "won the game!");
+                Console.WriteLine(currPlayer == 1 ? "Player X won the game!": "Player O won the game!");
             }
             else if (Pieces[3] == Pieces[5] && Pieces[3] == Pieces[7])
             {
                 hasWinner = true;
-                Console.WriteLine(currPlayer + "won the game!");
+                Console.WriteLine(currPlayer == 1 ? "Player X won the game!": "Player O won the game!");
             }
         }
 
@@ -144,27 +123,4 @@ namespace tic_tac
             }
         }
     }
-
-    // public static void ReturnForEach(){
-    //     boardPieces.AddRange(pieces);
-    //     foreach(string p in boardPieces){
-    //         Console.WriteLine(p);
-    //     };
-    // }
-
-    // public static void ReturnName(){
-    //     Console.WriteLine("Enter First Name:");
-    //     string firstName = Console.ReadLine();
-    //     Console.WriteLine("Enter Last Name:");
-    //     string lastName = Console.ReadLine();
-    //     int firstCount = firstName.Length;
-    //     int lastCount = lastName.Length;
-    //     if (firstCount > 0 && lastCount > 0){
-    //         Console.WriteLine(firstName + " " + lastName);
-    //     }else if (firstCount <= 0){
-    //         Console.WriteLine("You didn't put a first name");
-    //     }else if (lastCount <= 0) {
-    //         Console.WriteLine("You didn't put a last name");
-    //     }
-    // }
 }
