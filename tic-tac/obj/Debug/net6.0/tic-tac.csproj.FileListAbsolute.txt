@@ -1,0 +1,15 @@
+/Users/johngorriceta/CSE_210/tic-tac/bin/Debug/net6.0/tic-tac
+/Users/johngorriceta/CSE_210/tic-tac/bin/Debug/net6.0/tic-tac.deps.json
+/Users/johngorriceta/CSE_210/tic-tac/bin/Debug/net6.0/tic-tac.runtimeconfig.json
+/Users/johngorriceta/CSE_210/tic-tac/bin/Debug/net6.0/tic-tac.dll
+/Users/johngorriceta/CSE_210/tic-tac/bin/Debug/net6.0/tic-tac.pdb
+/Users/johngorriceta/CSE_210/tic-tac/obj/Debug/net6.0/tic-tac.csproj.AssemblyReference.cache
+/Users/johngorriceta/CSE_210/tic-tac/obj/Debug/net6.0/tic-tac.GeneratedMSBuildEditorConfig.editorconfig
+/Users/johngorriceta/CSE_210/tic-tac/obj/Debug/net6.0/tic-tac.AssemblyInfoInputs.cache
+/Users/johngorriceta/CSE_210/tic-tac/obj/Debug/net6.0/tic-tac.AssemblyInfo.cs
+/Users/johngorriceta/CSE_210/tic-tac/obj/Debug/net6.0/tic-tac.csproj.CoreCompileInputs.cache
+/Users/johngorriceta/CSE_210/tic-tac/obj/Debug/net6.0/tic-tac.dll
+/Users/johngorriceta/CSE_210/tic-tac/obj/Debug/net6.0/refint/tic-tac.dll
+/Users/johngorriceta/CSE_210/tic-tac/obj/Debug/net6.0/tic-tac.pdb
+/Users/johngorriceta/CSE_210/tic-tac/obj/Debug/net6.0/tic-tac.genruntimeconfig.cache
+/Users/johngorriceta/CSE_210/tic-tac/obj/Debug/net6.0/ref/tic-tac.dll
