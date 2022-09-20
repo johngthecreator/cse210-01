@@ -8,24 +8,26 @@
     "net6.0": []
   },
   "packageFolders": {
-    "/Users/johngorriceta/.nuget/packages/": {}
+    "C:\\Users\\johng\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/Users/johngorriceta/CSE_210/tic-tac/tic-tac.csproj",
+      "projectUniqueName": "C:\\Users\\johng\\OneDrive\\Documents\\CSE_210\\tic-tac\\tic-tac.csproj",
       "projectName": "tic-tac",
-      "projectPath": "/Users/johngorriceta/CSE_210/tic-tac/tic-tac.csproj",
-      "packagesPath": "/Users/johngorriceta/.nuget/packages/",
-      "outputPath": "/Users/johngorriceta/CSE_210/tic-tac/obj/",
+      "projectPath": "C:\\Users\\johng\\OneDrive\\Documents\\CSE_210\\tic-tac\\tic-tac.csproj",
+      "packagesPath": "C:\\Users\\johng\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\johng\\OneDrive\\Documents\\CSE_210\\tic-tac\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "/Users/johngorriceta/.nuget/NuGet/NuGet.Config"
+        "C:\\Users\\johng\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
         "net6.0"
       ],
       "sources": {
+        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
@@ -59,7 +61,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/x64/sdk/6.0.401/RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.401\\RuntimeIdentifierGraph.json"
       }
     }
   }
