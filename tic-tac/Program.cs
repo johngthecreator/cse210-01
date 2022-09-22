@@ -18,7 +18,18 @@ namespace tic_tac
         {7,"7"},
         {8,"8"},
         {9,"9"},
-    };
+        };
+        static Dictionary<int, List<int>> WinConditions = new Dictionary<int, List<int>>(){
+        { 1, new List<int>() {1, 2, 3 } },
+        { 2, new List<int>() {4, 5, 6 } },
+        { 3, new List<int>() {7, 8, 9 } },
+        { 4, new List<int>() {1, 4, 7 } },
+        { 5, new List<int>() {2, 5, 8 } },
+        { 6, new List<int>() {3, 6, 9 } },
+        { 7, new List<int>() {1, 5, 9 } },
+        { 8, new List<int>() {3, 5, 7 } }
+        };
+
         static void Main(string[] args)
         {
             while (hasWinner != true && roundCount < 9)
@@ -43,45 +54,13 @@ namespace tic_tac
         }
         public static void WinLogic()
         {
-            if (Pieces[1] == Pieces[2] && Pieces[1] == Pieces[3])
-            {
-                hasWinner = true;
-                Console.WriteLine(currPlayer == 1 ? "Player X won the game!": "Player O won the game!");
-            }
-            else if (Pieces[4] == Pieces[5] && Pieces[4] == Pieces[6])
-            {
-                hasWinner = true;
-                Console.WriteLine(currPlayer == 1 ? "Player X won the game!": "Player O won the game!");
-            }
-            else if (Pieces[7] == Pieces[8] && Pieces[7] == Pieces[9])
-            {
-                hasWinner = true;
-                Console.WriteLine(currPlayer == 1 ? "Player X won the game!": "Player O won the game!");
-            }
-            else if (Pieces[1] == Pieces[4] && Pieces[1] == Pieces[7])
-            {
-                hasWinner = true;
-                Console.WriteLine(currPlayer == 1 ? "Player X won the game!": "Player O won the game!");
-            }
-            else if (Pieces[2] == Pieces[5] && Pieces[2] == Pieces[8])
-            {
-                hasWinner = true;
-                Console.WriteLine(currPlayer == 1 ? "Player X won the game!": "Player O won the game!");
-            }
-            else if (Pieces[3] == Pieces[6] && Pieces[3] == Pieces[9])
-            {
-                hasWinner = true;
-                Console.WriteLine(currPlayer == 1 ? "Player X won the game!": "Player O won the game!");
-            }
-            else if (Pieces[1] == Pieces[5] && Pieces[1] == Pieces[9])
-            {
-                hasWinner = true;
-                Console.WriteLine(currPlayer == 1 ? "Player X won the game!": "Player O won the game!");
-            }
-            else if (Pieces[3] == Pieces[5] && Pieces[3] == Pieces[7])
-            {
-                hasWinner = true;
-                Console.WriteLine(currPlayer == 1 ? "Player X won the game!": "Player O won the game!");
+            foreach(KeyValuePair<int, List<int>> e in WinConditions){
+                if (Pieces[e.Value[0]] == Pieces[e.Value[1]] && Pieces[e.Value[0]] == Pieces[e.Value[2]])
+                {
+                    hasWinner = true;
+                    Console.WriteLine(currPlayer == 1 ? "Player X won the game!": "Player O won the game!");
+                }
+
             }
         }
 
@@ -120,7 +99,7 @@ namespace tic_tac
                     else
                         Console.WriteLine("You can't do that");
                 }
-            }
+            } 
         }
     }
 }
