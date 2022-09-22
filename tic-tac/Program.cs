@@ -19,6 +19,7 @@ namespace tic_tac
         {8,"8"},
         {9,"9"},
         };
+
         static Dictionary<int, List<int>> WinConditions = new Dictionary<int, List<int>>(){
         { 1, new List<int>() {1, 2, 3 } },
         { 2, new List<int>() {4, 5, 6 } },
