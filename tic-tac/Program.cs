@@ -38,6 +38,7 @@ namespace tic_tac
                 PrintBoard();
                 PlayerTurn();
                 WinLogic();
+                TextColor();
                 roundCount += 1;
             }
             if (roundCount == 9 && hasWinner != true){
@@ -101,6 +102,17 @@ namespace tic_tac
                         Console.WriteLine("You can't do that");
                 }
             } 
+        }
+        public static void TextColor()
+        {
+            if (currPlayer == 0)
+            {
+                Console.ForegroundColor = ConsoleColor.Red;
+            }
+            else
+            {
+                Console.ForegroundColor = ConsoleColor.Blue;
+            }
         }
     }
 }
