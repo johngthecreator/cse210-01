@@ -1,4 +1,6 @@
-﻿// Authors: Jackson Clarke, John Gorriceta, and Caleb
+﻿//Class: CSE 210-01
+//Project: Tic-Tac-Toe Game
+// Authors: Jackson Clarke, John Gorriceta, and Caleb
 
 using System;
 using System.Collections.Generic;
