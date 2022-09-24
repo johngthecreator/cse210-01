@@ -1,4 +1,6 @@
-﻿using System;
+﻿// Authors: Jackson Clarke, John Gorriceta, and Caleb
+
+using System;
 using System.Collections.Generic;
 
 namespace tic_tac
