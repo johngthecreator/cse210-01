@@ -1,8 +1,14 @@
-﻿using static Director.Program;
-internal class Program
-{
-    private static void Main(string[] args)
+﻿namespace Game{
+    internal class Program
     {
-        Console.WriteLine("Hello, World!");
+        private static void Main(string[] args)
+        {
+            Console.WriteLine("Hello, World!");
+            Director Person1 = new Director("John");
+            Director Person2 = new Director("Madz");
+            Person1.Greeting();
+
+        }
     }
+
 }
