@@ -1,4 +1,5 @@
-namespace Game{
+namespace Unit2.Game
+{
     class Director{
         public string name;
         public Director(string theirName){
