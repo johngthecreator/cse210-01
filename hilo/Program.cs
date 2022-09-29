@@ -1,4 +1,5 @@
-﻿namespace Game{
+﻿using Unit2.Game;
+namespace Unit2{
     internal class Program
     {
         private static void Main(string[] args)
