@@ -1,12 +1,35 @@
 namespace Unit2.Game
 {
     class Director{
-        public string name;
-        public Director(string theirName){
-            name = theirName;
+
+        bool isPlaying = true;
+        public int score = 300;
+        public int currentCard;
+
+        public string guess;
+        public Director(){
+           
         }
-        public void Greeting(){
-            Console.WriteLine("Hello I am " + name);
+
+        public void startGame(){
+            while(isPlaying){
+                selectCard();
+                getGuess();
+                checkGuess();
+
+            }
+        }
+        public void selectCard(){
+            
+        }
+
+        public void getGuess(){
+            Console.WriteLine("The card is: " + currentCard);
+            Console.WriteLine("Higher or Lower? [h/l] ");
+            guess = Console.ReadLine();
+        }
+        public void checkGuess(){
+            
         }
 
     }
