@@ -53,7 +53,5 @@ namespace Unit2.Game
                 }
             }
         }
-
     }
-
 }
