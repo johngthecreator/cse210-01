@@ -4,7 +4,6 @@ namespace Unit2.Game
         static int currCard;
         static int oldCard;
         static int totalScore = 300;
-        static string userChoice;
         public void playGame(){
             Card CardDraw = new Card();
             currCard = CardDraw.callCard();
