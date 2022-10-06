@@ -1,37 +1,57 @@
 namespace Unit2.Game
 {
     class Director{
-
-        bool isPlaying = true;
-        public int score = 300;
-        public int currentCard;
-
-        public string guess;
-        public Director(){
-           
+        static int currCard;
+        static int oldCard;
+        static int totalScore = 300;
+        static string userChoice;
+        public void playGame(){
+            Card CardDraw = new Card();
+            currCard = CardDraw.callCard();
+            Console.WriteLine($"The card is: {currCard}");
+            Console.WriteLine("Higher or lower? [h/l] ");
+            string userInput = Console.ReadLine();
+            if (userInput == "h"){
+                oldCard = currCard;
+                currCard = CardDraw.callCard();
+                compareCards(currCard, oldCard, userInput);
+                Console.WriteLine($"Next card was: {currCard}");
+                Console.WriteLine($"Your score is: {totalScore}");
+                Continue();
+            } else if (userInput == "l"){
+                oldCard = currCard;
+                currCard = CardDraw.callCard();
+                compareCards(currCard, oldCard, userInput);
+                Console.WriteLine($"Next card was: {currCard}");
+                Console.WriteLine($"Your score is: {totalScore}");
+                Continue();
+            }
         }
-
-        public void startGame(){
-            while(isPlaying){
-                selectCard();
-                getGuess();
-                checkGuess();
+        public void Continue(){
+            Console.WriteLine("Play again? [y/n] ");
+            string userContinue = Console.ReadLine();
+            if (userContinue == "y"){
+                playGame();
+            }else{
 
             }
         }
-        public void selectCard(){
-            
-        }
 
-        public void getGuess(){
-            Console.WriteLine("The card is: " + currentCard);
-            Console.WriteLine("Higher or Lower? [h/l] ");
-            guess = Console.ReadLine();
-        }
-        public void checkGuess(){
-            
-        }
+        public void compareCards(int curr, int old, string choice){
+            if (choice == "l"){
+                if (curr < old){
+                    totalScore = totalScore + 100;
 
+                }else{
+                    totalScore = totalScore - 75;
+                }
+            } else if (choice == "h"){
+                if (curr > old){
+                    totalScore += 100;
+                } else {
+                    totalScore = totalScore - 75;
+                }
+            }
+        }
     }
-
 }
